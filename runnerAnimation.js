@@ -8,10 +8,10 @@ let stepSide = 1;           // 1 = right, -1 = left
 
 // Load foot images
 const leftFootImg = new Image();
-leftFootImg.src = 'Footprints_PNG2(2).png';
+leftFootImg.src = 'images/Footprints_PNG2(2).png';
 
 const rightFootImg = new Image();
-rightFootImg.src = 'Footprints_PNG2(1).png';
+rightFootImg.src = 'images/Footprints_PNG2(1).png';
 
 let imagesLoaded = 0;
 [leftFootImg, rightFootImg].forEach(img => {
