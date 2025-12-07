@@ -1,0 +1,184 @@
+/* ------------------- */
+/* Color and Font Vars */
+/* ------------------- */
+:root {
+  /* Define your color scheme here */
+  --color-primary: #122230;           /* Dark text */
+  --color-secondary: #182d40;      /* Light background */
+  --color-accent: #007bff;         /* Accent for links/buttons */
+  --color-font: #ffffff;
+
+  /* Fonts */
+  --font-heading: Verdana, sans-serif;
+  --font-body: Verdana, sans-serif;
+}
+
+/* ------------------- */
+/* Basic Body Styles   */
+/* ------------------- */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-secondary);
+  color: var(--color-font);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ------------------- */
+/* Layout & Sections   */
+/* ------------------- */
+header {
+  background-color: var(--color-primary);
+  color: var(--color-font);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto; /* Centers the main content */
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* ------------------- */
+/* Lists / Bullet Points */
+/* ------------------- */
+ul, ol {
+  padding-left: 20px; /* indentation from left edge */
+  margin-bottom: 20px; /* space after the list */
+}
+
+li {
+  font-family: var(--font-body);   /* body font for list items */
+  color: var(--color-font);        /* text color for bullets */
+  font-size: 1em;                  /* adjust size if needed */
+  line-height: 1.5;                /* spacing between bullets */
+}
+
+/* Example of a border for a block area */
+.content-block {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: white;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-font);
+}
+
+/* ------------------- */
+/* Content Styling     */
+/* ------------------- */
+h1, h2 {
+  font-family: var(--font-heading);
+  color: var(--color-font);
+}
+
+header h1 {
+  color: white; /* Header override */
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  width: 320px;
+  height: 500px;
+  display: block;
+  margin: 0 auto; /* Centers image */
+}
+
+.image-row {
+    display: flex;
+    gap: 1px; /* space between */
+}
+.div-photo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers image */
+
+}
+ 
+/* Borders */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 40px 0;
+}
+
+/* Container: make images side by side */
+.resource-images {
+    display: flex;           /* horizontal layout */
+    justify-content: center; /* center all images */
+    gap: 20px;               /* space between images */
+    flex-wrap: wrap;         /* allows wrapping on small screens */
+}
+
+/* Images: responsive size */
+.resource-images img {
+    width: 150px;
+    height: 150px;      /* maintain aspect ratio */
+    display: block;
+    object-fit: cover;
+}
+
+
+
+/* ------------------- */
+/* Responsive Design   */
+/* ------------------- */
+@media (max-width: 600px) {
+  nav ul li {
+    display: block; /* Stack nav links vertically */
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+}
